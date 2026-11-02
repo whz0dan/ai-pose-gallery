@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <script>document.documentElement.dataset.theme=localStorage.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")</script>
-<title>AI Pose Reference Gallery | 288 poses · 1,439 multi-angle references</title>
-<meta name="description" content="288 human poses and 1,439 multi-angle 900×1200 reference images covering full body, upper body and couple poses. Filter by series, category and camera angle, compare angles and download the originals for AI art, composition and posing reference.">
+<title>AI Pózatlasz | 288 póz · 1439 referenciakép</title>
+<meta name="description" content="288 póz, 1439 referenciakép több nézetből. Magyar pózleírások, kategóriák és útmutató AI-képek készítéséhez.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="application-name" content="POSE Atlas">
 <meta name="theme-color" content="#f5f7fb">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="POSE Atlas">
-<meta property="og:title" content="AI Pose Reference Gallery | 288 poses · 1,439 references">
-<meta property="og:description" content="Filter 288 poses by series, category and angle. Compare angles and download 900×1200 originals.">
-<meta property="og:url" content="https://imorpheuz.github.io/ai-pose-gallery/">
+<meta property="og:title" content="AI Pózatlasz | 288 póz · 1439 referenciakép">
+<meta property="og:description" content="Válassz pózt, hasonlítsd össze a nézeteket, és töltsd le a referenciaképet.">
+<meta property="og:url" content="https://whz0dan.github.io/ai-pose-gallery/">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235b5bd6'/%3E%3Ccircle cx='16' cy='9' r='3.2' fill='white'/%3E%3Cpath d='M16 13.5c-2.5 0-4 1.6-4 3.8v3.8h2v7h4v-7h2v-3.8c0-2.2-1.5-3.8-4-3.8z' fill='white'/%3E%3C/svg%3E">
 <style>
@@ -108,8 +108,8 @@ main{padding:22px 0 54px}
 .pose-card{min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;cursor:zoom-in;transition:transform .18s,box-shadow .18s,border-color .18s;outline:none}
 .pose-card:hover,.pose-card:focus-visible{transform:translateY(-3px);border-color:#ccd1e3;box-shadow:var(--shadow)}
 .card-image{position:relative;aspect-ratio:3/4;overflow:hidden;background:#f8f9fb}
-.main-image{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease,opacity .18s}
-.pose-card:hover .main-image{transform:scale(1.018)}
+.main-image{display:block;width:100%;height:100%;object-fit:contain;transition:transform .35s ease,opacity .18s}
+.pose-card:hover .main-image{transform:none}
 .image-top{position:absolute;inset:10px 10px auto;display:flex;justify-content:space-between;align-items:center;gap:8px;pointer-events:none}
 .pose-no,.angle-tag{display:inline-flex;align-items:center;min-height:24px;padding:0 8px;border-radius:7px;background:rgba(23,26,33,.76);backdrop-filter:blur(6px);color:#fff;font-size:10px;font-weight:700;letter-spacing:.04em}
 .angle-tag{background:rgba(255,255,255,.90);color:var(--text);border:1px solid rgba(229,232,239,.8)}
@@ -126,7 +126,7 @@ main{padding:22px 0 54px}
 .angle-thumb{min-width:0;padding:2px;border:1px solid transparent;border-radius:8px;background:transparent;cursor:pointer;transition:border-color .15s,background .15s}
 .angle-thumb:hover{background:var(--surface-2);border-color:var(--line-strong)}
 .angle-thumb.on{border-color:var(--accent);background:var(--accent-soft)}
-.angle-thumb img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:5px;background:#f5f6f8}
+.angle-thumb img{display:block;width:100%;aspect-ratio:3/4;object-fit:contain;border-radius:5px;background:#f5f6f8}
 .angle-thumb span{display:block;margin:3px 0 1px;color:var(--text-3);font-size:9px;line-height:1.2;text-align:center;white-space:nowrap}
 .angle-thumb.on span{color:var(--accent);font-weight:700}
 .load-more{display:flex;align-items:center;justify-content:center;gap:8px;min-width:220px;height:46px;margin:28px auto 0;padding:0 22px;border:1px solid var(--line-strong);border-radius:12px;background:var(--surface);color:var(--text);font-weight:700;cursor:pointer;box-shadow:0 3px 10px rgba(28,35,60,.03)}
@@ -150,9 +150,9 @@ main{padding:22px 0 54px}
 .footer-links a{display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 12px;border:1px solid var(--line);border-radius:9px;text-decoration:none;color:var(--text-2);font-size:12px;font-weight:600}
 .footer-links a:hover{border-color:var(--accent);color:var(--accent)}
 .viewer{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:28px;background:rgba(15,18,28,.76);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-.viewer-panel{position:relative;width:min(1180px,100%);height:min(850px,92dvh);display:grid;grid-template-columns:minmax(0,1fr) 330px;background:var(--surface);border-radius:20px;overflow:hidden;box-shadow:0 28px 90px rgba(0,0,0,.35)}
+.viewer-panel{position:relative;width:min(1180px,100%);height:min(850px,92dvh);display:grid;grid-template-columns:minmax(0,1fr) 330px;grid-template-rows:minmax(0,1fr);background:var(--surface);border-radius:20px;overflow:hidden;box-shadow:0 28px 90px rgba(0,0,0,.35)}
 .viewer-stage{position:relative;min-width:0;min-height:0;display:grid;place-items:center;background:#eef0f4;overflow:hidden;touch-action:pan-y}
-.viewer-image{display:block;width:100%;height:100%;object-fit:contain;user-select:none;-webkit-user-drag:none}
+.viewer-image{position:absolute;inset:12px;display:block;width:calc(100% - 24px);height:calc(100% - 24px);object-fit:contain;user-select:none;-webkit-user-drag:none}
 .viewer-image.is-loading{opacity:.72}
 .image-status{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);padding:5px 11px;border-radius:99px;background:rgba(23,26,33,.72);color:#fff;font-size:11px;pointer-events:none}
 .viewer-close{position:absolute;right:14px;top:14px;z-index:4;width:42px;height:42px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.94);color:var(--text);display:grid;place-items:center;cursor:pointer;box-shadow:0 4px 16px rgba(20,25,40,.08)}
@@ -162,7 +162,7 @@ main{padding:22px 0 54px}
 .viewer-nav.prev{left:14px}
 .viewer-nav.next{right:14px}
 .viewer-side{min-height:0;display:flex;flex-direction:column;gap:18px;padding:28px 24px 22px;overflow-y:auto;border-left:1px solid var(--line)}
-.viewer-heading{padding-right:32px}
+.viewer-heading{padding-right:32px;min-width:0;overflow-wrap:anywhere}
 .viewer-eyebrow{display:flex;align-items:center;justify-content:space-between;gap:10px;color:var(--accent);font-size:11px;font-weight:800;letter-spacing:.1em}
 .viewer-position{color:var(--text-3);font-weight:500;letter-spacing:0;font-variant-numeric:tabular-nums}
 .viewer-heading h2{margin:8px 0 9px;font-size:20px;line-height:1.45;letter-spacing:-.01em}
@@ -171,7 +171,7 @@ main{padding:22px 0 54px}
 .copy-btn{flex:0 0 auto;border:0;background:transparent;color:var(--accent);font-size:11px;cursor:pointer;padding:2px 4px}
 .side-section-title{margin:0 0 9px;color:var(--text-2);font-size:11px;font-weight:800}
 .viewer-angles{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
-.viewer-angles .angle-thumb span{font-size:9px}
+.viewer-angles .angle-thumb span{font-size:9px;white-space:normal;overflow-wrap:anywhere}
 .metadata{display:grid;grid-template-columns:70px 1fr;gap:8px 12px;margin:0;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:12px}
 .metadata dt{color:var(--text-3)}
 .metadata dd{margin:0;color:var(--text);font-weight:600;word-break:break-word}
@@ -276,7 +276,7 @@ main{padding:22px 0 54px}
   .footer-inner{display:block}
   .footer-links{justify-content:flex-start;margin-top:16px}
   .viewer{padding:0;place-items:stretch}
-  .viewer-panel{width:100%;height:100dvh;max-height:none;border-radius:0;grid-template-columns:1fr;grid-template-rows:minmax(280px,52dvh) minmax(0,1fr)}
+  .viewer-panel{width:100%;height:100dvh;max-height:none;border-radius:0;grid-template-columns:1fr;grid-template-rows:minmax(0,52dvh) minmax(0,1fr)}
   .viewer-stage{min-height:0}
   .viewer-side{gap:15px;padding:18px 16px calc(20px + env(safe-area-inset-bottom));border-left:0;border-top:1px solid var(--line)}
   .viewer-heading{padding-right:0}
@@ -318,94 +318,95 @@ html[data-theme="dark"] .skeleton .card-image,html[data-theme="dark"] .skeleton-
 html[data-theme="dark"] .viewer-stage{background:#0b0d12}
 html[data-theme="dark"] .info-head{background:rgba(23,26,34,.96)}
 html[data-theme="dark"] .info-note{background:#2a2414;color:#e6c27a}
+.reference-help{margin:0;color:var(--text-2);font-size:12px;line-height:1.7}
 </style>
 </head>
 <body>
 <header class="site-header">
   <div class="shell topbar">
-    <a class="brand" href="./" aria-label="Back to gallery home">
+    <a class="brand" href="./" aria-label="Vissza a galériához">
       <span class="brand-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="5" r="2.4"/><path d="M12 8v6m0-3-4 2m4-2 4 2m-4 2-3 6m3-6 3 6"/></svg></span>
-      <span class="brand-copy"><strong>POSE Atlas</strong><span>Reference Library</span></span>
+      <span class="brand-copy"><strong>POSE Atlas</strong><span>Pózreferenciák</span></span>
     </a>
-    <nav class="top-actions" aria-label="Help and sources">
-      <button class="action-btn" type="button" id="themeToggle" aria-label="Toggle dark mode"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg><span class="action-text">Theme</span></button>
-      <button class="action-btn" type="button" data-info="guide"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.7 9a2.4 2.4 0 0 1 4.6 1c0 1.8-2.3 2-2.3 3.6M12 17h.01"/></svg><span class="action-text">How to use</span></button>
-      <button class="action-btn" type="button" data-info="notice"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3 2.8 20h18.4L12 3Z"/><path d="M12 9v5m0 3h.01"/></svg><span class="action-text">Terms of use</span></button>
-      <a class="action-btn author" href="https://github.com/iMorpheuz/ai-pose-gallery" target="_blank" rel="noopener noreferrer" aria-label="View the GitHub repository"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .8a11.3 11.3 0 0 0-3.6 22c.6.1.8-.2.8-.5v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5A11.3 11.3 0 0 0 12 .8Z"/></svg><span class="action-text">GitHub</span></a>
-      <a class="action-btn author" href="https://x.com/anhao_ai" target="_blank" rel="noopener noreferrer" aria-label="Original Chinese edition author on X"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="action-text">@anhao_ai</span></a>
+    <nav class="top-actions" aria-label="Súgó és források">
+      <button class="action-btn" type="button" id="themeToggle" aria-label="Világos és sötét téma váltása"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg><span class="action-text">Megjelenés</span></button>
+      <button class="action-btn" type="button" data-info="guide"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.7 9a2.4 2.4 0 0 1 4.6 1c0 1.8-2.3 2-2.3 3.6M12 17h.01"/></svg><span class="action-text">Hogyan használd?</span></button>
+      <button class="action-btn" type="button" data-info="notice"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3 2.8 20h18.4L12 3Z"/><path d="M12 9v5m0 3h.01"/></svg><span class="action-text">Felhasználási feltételek</span></button>
+      <a class="action-btn author" href="https://github.com/whz0dan/ai-pose-gallery" target="_blank" rel="noopener noreferrer" aria-label="GitHub-repozitórium megnyitása"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .8a11.3 11.3 0 0 0-3.6 22c.6.1.8-.2.8-.5v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5A11.3 11.3 0 0 0 12 .8Z"/></svg><span class="action-text">GitHub</span></a>
+      <a class="action-btn author" href="https://x.com/anhao_ai" target="_blank" rel="noopener noreferrer" aria-label="A kínai változat készítője az X-en"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="action-text">@anhao_ai</span></a>
     </nav>
   </div>
   <div class="shell hero">
     <div>
-      <p class="eyebrow">AI POSE REFERENCE · ENGLISH EDITION</p>
-      <h1>AI Pose Reference Gallery<span class="hero-tagline">Find every pose you need</span></h1>
-      <p class="hero-desc">Multi-angle faceless mannequin line drawings for AI image generation, composition and posing reference. Filter by series, category and angle, and download originals in one click.</p>
+      <p class="eyebrow">AI PÓZREFERENCIÁK · MAGYAR VÁLTOZAT</p>
+      <h1>AI Pózatlasz<span class="hero-tagline">Válassz testtartást és kameranézetet</span></h1>
+      <p class="hero-desc">Válassz egy kész pózt, majd nézd meg elölről, oldalról vagy más irányból. Töltsd le a kiválasztott képet, és add az AI-nak testtartás-referenciaként.</p>
     </div>
-    <div class="hero-stats" aria-label="Gallery stats">
-      <div class="stat"><strong id="statPoses">288</strong><span>poses</span></div>
-      <div class="stat"><strong id="statImages">1,439</strong><span>images</span></div>
-      <div class="stat"><strong>5</strong><span>angles</span></div>
+    <div class="hero-stats" aria-label="A galéria adatai">
+      <div class="stat"><strong id="statPoses">288</strong><span>póz</span></div>
+      <div class="stat"><strong id="statImages">1,439</strong><span>kép</span></div>
+      <div class="stat"><strong>5</strong><span>nézet</span></div>
     </div>
   </div>
 </header>
 
-<section class="controls" aria-label="Gallery filters">
+<section class="controls" aria-label="A galéria szűrői">
   <div class="shell controls-inner">
-    <div class="line-tabs" id="lineTabs" role="tablist" aria-label="Series"></div>
+    <div class="line-tabs" id="lineTabs" role="tablist" aria-label="Sorozat"></div>
     <div class="search-row">
       <label class="search-box">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m20 20-4.2-4.2"/></svg>
-        <input id="searchInput" type="search" placeholder="Search pose name, number, ID or category" autocomplete="off" aria-label="Search poses">
-        <button class="search-clear" id="searchClear" type="button" aria-label="Clear search" hidden><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+        <input id="searchInput" type="search" placeholder="Keresés póznév, sorszám, azonosító vagy kategória szerint" autocomplete="off" aria-label="Pózok keresése">
+        <button class="search-clear" id="searchClear" type="button" aria-label="Keresés törlése" hidden><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
         <span class="search-key" aria-hidden="true">/</span>
       </label>
-      <button class="filter-toggle" id="filterToggle" type="button" aria-expanded="false" aria-controls="filterPanel"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h16M7 12h10m-7 6h4"/></svg>Filters<span class="filter-badge" id="filterBadge"></span></button>
+      <button class="filter-toggle" id="filterToggle" type="button" aria-expanded="false" aria-controls="filterPanel"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h16M7 12h10m-7 6h4"/></svg>Szűrők<span class="filter-badge" id="filterBadge"></span></button>
     </div>
     <div class="filter-panel" id="filterPanel">
       <div class="filter-field">
-        <label class="filter-label" for="categorySelect">Category</label>
-        <div class="select-wrap"><select id="categorySelect"><option value="">All categories</option></select></div>
+        <label class="filter-label" for="categorySelect">Kategória</label>
+        <div class="select-wrap"><select id="categorySelect"><option value="">Minden kategória</option></select></div>
       </div>
       <div class="filter-field">
-        <span class="filter-label">Angle</span>
-        <div class="segmented" id="angleFilter" role="group" aria-label="Filter by angle"></div>
+        <span class="filter-label">Kameranézet</span>
+        <div class="segmented" id="angleFilter" role="group" aria-label="Szűrés kameranézet szerint"></div>
       </div>
       <div class="filter-field view-field">
-        <span class="filter-label">View</span>
-        <div class="segmented" id="viewFilter" role="group" aria-label="Switch view">
-          <button type="button" data-view="pose" aria-pressed="true">Group by pose</button>
-          <button type="button" data-view="single" aria-pressed="false">Single images</button>
+        <span class="filter-label">Megjelenítés</span>
+        <div class="segmented" id="viewFilter" role="group" aria-label="Megjelenítés váltása">
+          <button type="button" data-view="pose" aria-pressed="true">Pózonként</button>
+          <button type="button" data-view="single" aria-pressed="false">Képenként</button>
         </div>
       </div>
-      <button class="reset-btn" id="resetFilters" type="button">Reset filters</button>
+      <button class="reset-btn" id="resetFilters" type="button">Szűrők törlése</button>
     </div>
   </div>
 </section>
 
 <main class="shell">
-  <h2 class="sr-only">Pose gallery</h2>
+  <h2 class="sr-only">Pózgaléria</h2>
   <div class="result-head">
-    <div class="result-summary"><strong id="resultCount">Loading gallery…</strong><span id="visibleCount"></span></div>
-    <div class="result-hint"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M8 3H3v5m13-5h5v5M8 21H3v-5m13 5h5v-5"/><circle cx="12" cy="12" r="3"/></svg>Hover thumbnails to switch angle · click to view full size</div>
+    <div class="result-summary"><strong id="resultCount">Galéria betöltése…</strong><span id="visibleCount"></span></div>
+    <div class="result-hint"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M8 3H3v5m13-5h5v5M8 21H3v-5m13 5h5v-5"/><circle cx="12" cy="12" r="3"/></svg>Vidd az egeret egy kis képre a nézetváltáshoz · kattints a nagyításhoz</div>
   </div>
-  <div class="active-filters" id="activeFilters" aria-label="Active filters"></div>
+  <div class="active-filters" id="activeFilters" aria-label="Aktív szűrők"></div>
   <div class="grid" id="grid" aria-live="polite">
     <div class="pose-card skeleton"><div class="card-image"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>
     <div class="pose-card skeleton"><div class="card-image"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>
     <div class="pose-card skeleton"><div class="card-image"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>
     <div class="pose-card skeleton"><div class="card-image"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>
   </div>
-  <button class="load-more" id="loadMore" type="button" hidden>Load more</button>
+  <button class="load-more" id="loadMore" type="button" hidden>Továbbiak betöltése</button>
 </main>
 
 <footer class="site-footer">
   <div class="shell footer-inner">
     <div class="footer-copy">
-      <p><strong>POSE Atlas English Edition</strong> · Images and original data © the original author ギア (<a href="https://x.com/giaaibusi" target="_blank" rel="noopener noreferrer">@giaaibusi</a>) · Layout based on the Chinese edition by <a href="https://github.com/anhao/ai-pose-gallery-zh" target="_blank" rel="noopener noreferrer">Anhao</a></p>
-      <p>Source: <a href="https://ai-pose-gallery.pages.dev/" target="_blank" rel="noopener noreferrer">ai-pose-gallery.pages.dev</a> · Read the terms of use before using the images. Redistribution, reposting and resale of the image data follow the original author's terms.</p>
+      <p><strong>POSE Atlas · Magyar változat</strong> · Képek és eredeti adatok © az eredeti készítő: ギア (<a href="https://x.com/giaaibusi" target="_blank" rel="noopener noreferrer">@giaaibusi</a>) · A felület alapja a kínai változat. Készítő: <a href="https://github.com/anhao/ai-pose-gallery-zh" target="_blank" rel="noopener noreferrer">Anhao</a></p>
+      <p>Forrás: <a href="https://ai-pose-gallery.pages.dev/" target="_blank" rel="noopener noreferrer">ai-pose-gallery.pages.dev</a> · A képek használatára az eredeti készítő feltételei vonatkoznak. A tömeges letöltés, újraközlés és továbbértékesítés tiltott.</p>
     </div>
     <div class="footer-links">
-      <a href="https://github.com/iMorpheuz/ai-pose-gallery" target="_blank" rel="noopener noreferrer">GitHub source<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 4h6v6m0-6-9 9M19 14v6H4V5h6"/></svg></a>
+      <a href="https://github.com/whz0dan/ai-pose-gallery" target="_blank" rel="noopener noreferrer">GitHub-forrás<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 4h6v6m0-6-9 9M19 14v6H4V5h6"/></svg></a>
       <a href="https://x.com/anhao_ai" target="_blank" rel="noopener noreferrer">X @anhao_ai<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 4h6v6m0-6-9 9M19 14v6H4V5h6"/></svg></a>
     </div>
   </div>
@@ -413,48 +414,50 @@ html[data-theme="dark"] .info-note{background:#2a2414;color:#e6c27a}
 
 <div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="viewerTitle" hidden>
   <section class="viewer-panel">
-    <button class="viewer-close" id="viewerClose" type="button" aria-label="Close viewer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+    <button class="viewer-close" id="viewerClose" type="button" aria-label="Képnézet bezárása"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
     <div class="viewer-stage" id="viewerStage">
       <img class="viewer-image" id="viewerImage" alt="" draggable="false">
-      <span class="image-status" id="imageStatus" hidden>Loading full image…</span>
-      <button class="viewer-nav prev" id="anglePrev" type="button" aria-label="Previous angle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="m15 5-7 7 7 7"/></svg></button>
-      <button class="viewer-nav next" id="angleNext" type="button" aria-label="Next angle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="m9 5 7 7-7 7"/></svg></button>
+      <span class="image-status" id="imageStatus" hidden>Teljes méretű kép betöltése…</span>
+      <button class="viewer-nav prev" id="anglePrev" type="button" aria-label="Előző kameranézet"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="m15 5-7 7 7 7"/></svg></button>
+      <button class="viewer-nav next" id="angleNext" type="button" aria-label="Következő kameranézet"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="m9 5 7 7-7 7"/></svg></button>
     </div>
     <aside class="viewer-side">
       <div class="viewer-heading">
-        <div class="viewer-eyebrow"><span id="viewerNumber">POSE</span><span class="viewer-position" id="viewerPosition"></span></div>
-        <h2 id="viewerTitle">Pose details</h2>
-        <div class="id-row"><code class="viewer-id" id="viewerId"></code><button class="copy-btn" id="copyId" type="button">Copy ID</button></div>
+        <div class="viewer-eyebrow"><span id="viewerNumber">PÓZ</span><span class="viewer-position" id="viewerPosition"></span></div>
+        <h2 id="viewerTitle">A póz részletei</h2>
+        <div class="id-row"><code class="viewer-id" id="viewerId"></code><button class="copy-btn" id="copyId" type="button">Azonosító másolása</button></div>
       </div>
       <div>
-        <h3 class="side-section-title">Angles</h3>
+        <h3 class="side-section-title">Kameranézetek</h3>
         <div class="viewer-angles" id="viewerAngles"></div>
       </div>
       <div class="download-stack">
-        <a class="download-btn" id="downloadImage" href="#" download><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3v12m-5-5 5 5 5-5M4 20h16"/></svg>Download full-size PNG</a>
-        <a class="open-btn" id="openImage" href="#" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M14 4h6v6m0-6-9 9M19 14v6H4V5h6"/></svg>Open in new tab</a>
+        <a class="download-btn" id="downloadImage" href="#" download><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3v12m-5-5 5 5 5-5M4 20h16"/></svg>Teljes méretű PNG letöltése</a>
+        <a class="open-btn" id="openImage" href="#" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M14 4h6v6m0-6-9 9M19 14v6H4V5h6"/></svg>Megnyitás új lapon</a>
       </div>
       <dl class="metadata" id="viewerMeta"></dl>
-      <div class="keyboard-help"><kbd>←</kbd> <kbd>→</kbd> switch angle · <kbd>↑</kbd> <kbd>↓</kbd> switch pose<br><kbd>Esc</kbd> close · swipe left/right on mobile</div>
+      <p class="reference-help">Ezt a testtartást szeretnéd? Töltsd le a PNG-t, és add a képgenerátornak pózreferenciaként. A nézet a kamera irányát jelöli; ugyanannak a póznak másik oldalát mutatja.</p>
+      <div class="keyboard-help"><kbd>←</kbd> <kbd>→</kbd> nézetváltás · <kbd>↑</kbd> <kbd>↓</kbd> pózváltás<br><kbd>Esc</kbd> bezárás · mobilon húzd a képet jobbra vagy balra</div>
     </aside>
   </section>
 </div>
 
 <dialog class="info-dialog" id="infoDialog">
-  <div class="info-head"><h2 id="infoTitle">How to use</h2><button class="info-close" id="infoClose" type="button" aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+  <div class="info-head"><h2 id="infoTitle">Hogyan használd?</h2><button class="info-close" id="infoClose" type="button" aria-label="Bezárás"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
   <div class="info-content" id="infoContent"></div>
 </dialog>
 
 <script>
 (() => {
 'use strict';
-const ANGLES = ['Front', 'High angle', 'Low angle', 'Side', 'Diagonal'];
+const ANGLES = ['Elölről', 'Felülről', 'Alulról', 'Oldalról', 'Ferdén'];
 const PAGE_SIZE = { pose: 60, single: 96 };
 const state = { line: '', category: '', angle: '', query: '', view: 'pose', shown: PAGE_SIZE.pose };
 const $ = selector => document.querySelector(selector);
 const grid = $('#grid');
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-const format = value => Number(value).toLocaleString('en-US');
+const normalizeSearch = value => String(value).toLocaleLowerCase('hu-HU').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+const format = value => Number(value).toLocaleString('hu-HU');
 const icon = name => ({
   expand: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M8 3H3v5m13-5h5v5M8 21H3v-5m13 5h5v-5"/></svg>',
   search: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m20 20-4.2-4.2"/></svg>'
@@ -474,7 +477,7 @@ function prepareData(data) {
   DATA = data;
   LINES = [...new Set(DATA.map(item => item.system))];
   DATA.forEach(item => {
-    item._search = `${item.name} ${item.id} ${item.category} ${item.number}`.toLowerCase();
+    item._search = normalizeSearch(`${item.name} ${item.name_en} ${item.id} ${item.category} ${item.category_en} ${item.system} ${item.system_en} ${item.number}`);
     const key = groupKey(item);
     if (!groupMap.has(key)) {
       const group = { key, system: item.system, number: item.number, name: item.name, category: item.category, items: [], angles: {}, order: [] };
@@ -499,24 +502,24 @@ function prepareData(data) {
 }
 
 function renderTabs() {
-  const tabs = [['', 'All', DATA.length, GROUPS.length], ...LINES.map(line => [line, line, DATA.filter(item => item.system === line).length, GROUPS.filter(group => group.system === line).length])];
-  $('#lineTabs').innerHTML = tabs.map(([value, label, images, poses]) => `<button class="line-tab" type="button" role="tab" data-line="${esc(value)}" aria-selected="${state.line === value}"><span class="tab-name">${esc(label)}</span><span class="tab-count">${format(images)} images · ${format(poses)} poses</span></button>`).join('');
+  const tabs = [['', 'Összes', DATA.length, GROUPS.length], ...LINES.map(line => [line, line, DATA.filter(item => item.system === line).length, GROUPS.filter(group => group.system === line).length])];
+  $('#lineTabs').innerHTML = tabs.map(([value, label, images, poses]) => `<button class="line-tab" type="button" role="tab" data-line="${esc(value)}" aria-selected="${state.line === value}"><span class="tab-name">${esc(label)}</span><span class="tab-count">${format(images)} kép · ${format(poses)} póz</span></button>`).join('');
 }
 
 function renderCategoryOptions() {
-  const categories = [...new Set(DATA.filter(item => !state.line || item.system === state.line).map(item => item.category).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'en-US'));
-  $('#categorySelect').innerHTML = '<option value="">All categories</option>' + categories.map(category => `<option value="${esc(category)}"${state.category === category ? ' selected' : ''}>${esc(category)}</option>`).join('');
+  const categories = [...new Set(DATA.filter(item => !state.line || item.system === state.line).map(item => item.category).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'hu-HU'));
+  $('#categorySelect').innerHTML = '<option value="">Minden kategória</option>' + categories.map(category => `<option value="${esc(category)}"${state.category === category ? ' selected' : ''}>${esc(category)}</option>`).join('');
 }
 
 function renderAngleFilter() {
-  $('#angleFilter').innerHTML = ['', ...ANGLES].map(angle => `<button type="button" data-angle="${esc(angle)}" aria-pressed="${state.angle === angle}">${angle || 'All angles'}</button>`).join('');
+  $('#angleFilter').innerHTML = ['', ...ANGLES].map(angle => `<button type="button" data-angle="${esc(angle)}" aria-pressed="${state.angle === angle}">${angle || 'Minden nézet'}</button>`).join('');
 }
 
 function hit(item) {
   return (!state.line || item.system === state.line) &&
     (!state.category || item.category === state.category) &&
     (!state.angle || item.angle === state.angle) &&
-    (!state.query || item._search.includes(state.query));
+    (!state.query || item._search.includes(normalizeSearch(state.query)));
 }
 
 function computeList() {
@@ -538,7 +541,7 @@ function poseCard(entry, index) {
   const { group, item } = entry;
   const strip = ANGLES.filter(angle => group.angles[angle]).map(angle => {
     const angleItem = group.angles[angle];
-    return `<button class="angle-thumb${angleItem === item ? ' on' : ''}" type="button" data-angle="${esc(angle)}" title="${esc(angle)}" aria-label="View ${esc(angle)}"><img src="${esc(angleItem.thumb)}" alt="" loading="lazy" decoding="async"><span>${esc(angle)}</span></button>`;
+    return `<button class="angle-thumb${angleItem === item ? ' on' : ''}" type="button" data-angle="${esc(angle)}" title="${esc(angle)}" aria-label="Nézet: ${esc(angle)}"><img src="${esc(angleItem.thumb)}" alt="" loading="lazy" decoding="async"><span>${esc(angle)}</span></button>`;
   }).join('');
   return `<article class="pose-card" tabindex="0" data-index="${index}" aria-label="${esc(group.name)}, ${esc(item.angle)}">${cardImage(item, group.name, group.number)}<div class="card-body"><h3>${esc(group.name)}</h3><div class="card-meta"><span class="system">${esc(group.system)}</span><span class="meta-dot">·</span><span class="category">${esc(group.category)}</span></div></div><div class="angle-strip">${strip}</div></article>`;
 }
@@ -559,12 +562,12 @@ function syncControls() {
 
 function renderActiveFilters() {
   const filters = [];
-  if (state.line) filters.push(['line', `Series: ${state.line}`]);
-  if (state.category) filters.push(['category', `Category: ${state.category}`]);
-  if (state.angle) filters.push(['angle', `Angle: ${state.angle}`]);
-  if (state.query) filters.push(['query', `Search: ${state.query}`]);
-  if (state.view === 'single') filters.push(['view', 'Single images']);
-  $('#activeFilters').innerHTML = filters.map(([key, label]) => `<button class="filter-chip" type="button" data-clear="${key}" title="Remove filter">${esc(label)}</button>`).join('');
+  if (state.line) filters.push(['line', `Sorozat: ${state.line}`]);
+  if (state.category) filters.push(['category', `Kategória: ${state.category}`]);
+  if (state.angle) filters.push(['angle', `Nézet: ${state.angle}`]);
+  if (state.query) filters.push(['query', `Keresés: ${state.query}`]);
+  if (state.view === 'single') filters.push(['view', 'Képenként']);
+  $('#activeFilters').innerHTML = filters.map(([key, label]) => `<button class="filter-chip" type="button" data-clear="${key}" title="Szűrő eltávolítása">${esc(label)}</button>`).join('');
 }
 
 function render(append = false) {
@@ -580,18 +583,18 @@ function render(append = false) {
 
   if (state.view === 'pose') {
     const images = currentList.reduce((sum, entry) => sum + entry.matched, 0);
-    $('#resultCount').textContent = `${format(total)} poses · ${format(images)} images`;
+    $('#resultCount').textContent = `${format(total)} póz · ${format(images)} kép`;
   } else {
-    $('#resultCount').textContent = `${format(total)} images`;
+    $('#resultCount').textContent = `${format(total)} kép`;
   }
-  $('#visibleCount').textContent = total > state.shown ? `Showing ${format(renderedCount)} / ${format(total)}` : `${format(total)} total`;
+  $('#visibleCount').textContent = total > state.shown ? `Megjelenítve: ${format(renderedCount)} / ${format(total)}` : `Összesen: ${format(total)}`;
 
   if (!total) {
-    grid.innerHTML = `<div class="empty"><div class="empty-icon">${icon('search')}</div><h3>No matching poses</h3><p>Try a different keyword or fewer filters.</p><button type="button" id="emptyReset">Clear all filters</button></div>`;
+    grid.innerHTML = `<div class="empty"><div class="empty-icon">${icon('search')}</div><h3>Nincs megfelelő póz</h3><p>Próbálj másik kulcsszót, vagy használj kevesebb szűrőt.</p><button type="button" id="emptyReset">Minden szűrő törlése</button></div>`;
   }
   const more = $('#loadMore');
   more.hidden = renderedCount >= total || !total;
-  more.textContent = `Load more (${format(total - renderedCount)} ${state.view === 'pose' ? 'poses' : 'images'} left)`;
+  more.textContent = `Továbbiak betöltése (${format(total - renderedCount)} ${state.view === 'pose' ? 'póz' : 'kép'} maradt)`;
   syncControls();
   renderActiveFilters();
 }
@@ -754,7 +757,7 @@ function showViewer() {
   image.src = item.thumb;
   image.alt = `${item.name} · ${item.angle}`;
   image.classList.add('is-loading');
-  $('#imageStatus').textContent = 'Loading full image…';
+  $('#imageStatus').textContent = 'Teljes méretű kép betöltése…';
   $('#imageStatus').hidden = false;
   const full = new Image();
   full.decoding = 'async';
@@ -767,20 +770,20 @@ function showViewer() {
   full.onerror = () => {
     if (token !== viewerState.token) return;
     image.classList.remove('is-loading');
-    $('#imageStatus').textContent = 'Full image failed to load. Try opening it in a new tab.';
+    $('#imageStatus').textContent = 'Nem sikerült betölteni a teljes képet. Próbáld új lapon megnyitni.';
     $('#imageStatus').hidden = false;
   };
   full.src = item.full;
 
-  $('#viewerNumber').textContent = item.number || 'POSE';
+  $('#viewerNumber').textContent = item.number || 'PÓZ';
   $('#viewerPosition').textContent = `${viewerState.index + 1} / ${currentList.length}`;
   $('#viewerTitle').textContent = item.name;
   $('#viewerId').textContent = item.id;
-  $('#copyId').textContent = 'Copy ID';
-  $('#viewerMeta').innerHTML = [['Series', item.system], ['Pose number', item.number || '—'], ['Category', item.category || '—'], ['Angle', item.angle || '—'], ['Image size', '900 × 1200 PNG']].map(([key, value]) => `<dt>${key}</dt><dd>${esc(value)}</dd>`).join('');
+  $('#copyId').textContent = 'Azonosító másolása';
+  $('#viewerMeta').innerHTML = [['Sorozat', item.system], ['Póz száma', item.number || '—'], ['Kategória', item.category || '—'], ['Nézet', item.angle || '—'], ['Képméret', '900 × 1200 PNG']].map(([key, value]) => `<dt>${key}</dt><dd>${esc(value)}</dd>`).join('');
   $('#viewerAngles').innerHTML = ANGLES.filter(angle => group.angles[angle]).map(angle => {
     const angleItem = group.angles[angle];
-    return `<button class="angle-thumb${angleItem === item ? ' on' : ''}" type="button" data-angle="${esc(angle)}" aria-label="Switch to ${esc(angle)}"><img src="${esc(angleItem.thumb)}" alt="${esc(angle)}"><span>${esc(angle)}</span></button>`;
+    return `<button class="angle-thumb${angleItem === item ? ' on' : ''}" type="button" data-angle="${esc(angle)}" aria-label="Váltás erre: ${esc(angle)}"><img src="${esc(angleItem.thumb)}" alt="${esc(angle)}"><span>${esc(angle)}</span></button>`;
   }).join('');
   const download = $('#downloadImage');
   download.href = item.full;
@@ -819,9 +822,9 @@ $('#viewerAngles').addEventListener('click', event => {
 $('#copyId').addEventListener('click', async () => {
   try {
     await navigator.clipboard.writeText(viewerState.item.id);
-    $('#copyId').textContent = 'Copied';
+    $('#copyId').textContent = 'Másolva';
   } catch {
-    $('#copyId').textContent = 'Copy manually';
+    $('#copyId').textContent = 'Másold ki kézzel';
   }
 });
 
@@ -856,12 +859,12 @@ document.addEventListener('keydown', event => {
 
 const INFO = {
   guide: {
-    title: 'How to use',
-    html: '<ul><li>Load a reference image into your AI tool\'s <strong>pose reference / composition reference</strong> feature (ControlNet, IP-Adapter, or prompt &ldquo;change to this pose&rdquo;).</li><li>Using several angles of the same pose keeps the pose consistent across generated images or video.</li><li>Click a card or thumbnail to open the viewer and download the <strong>900 × 1200 full-size PNG</strong>.</li><li>Images are faceless gray mannequin line drawings with no face, clothing or background. Add those with your prompt or other references.</li><li>On desktop use <strong>← / →</strong> to switch angle and <strong>↑ / ↓</strong> to switch pose. On mobile, swipe the image left or right.</li></ul>'
+    title: 'Hogyan használd a pózokat?',
+    html: '<ol><li><strong>Válassz egy kész testtartást.</strong> A sorozatok és kategóriák segítenek szűkíteni. Kereshetsz például erre: térdelés, kéz a csípőn vagy előrehajlás. Ékezet nélkül és az eredeti angol névvel is működik a keresés.</li><li><strong>Válassz kameranézetet.</strong> Elölről: szemből látod az alakot. Felülről: a kamera lefelé néz. Alulról: a kamera felfelé néz. Oldalról: profilnézet. Ferdén: köztes, háromnegyedes nézet. Ezek ugyanannak a póznak a különböző nézetei.</li><li><strong>Nézd meg a test részeit.</strong> Figyeld a törzs dőlését, a csípő helyzetét, a karokat és a térdeket. A magyar cím leírja a fő elemeket. A W ülésben a térdek elöl, a lábfejek a csípő két oldalán vannak; a sarokülésben az alak a sarkán ül.</li><li><strong>Töltsd le a kiválasztott PNG-t.</strong> A képgenerátorban töltsd fel referencia- vagy bemeneti képként. Ha van külön pózvezérlés, ott add meg; ControlNet esetén a beállított előfeldolgozóval készíthetsz belőle pózvázat.</li><li><strong>Írd mellé a saját karakteredet és stílusodat.</strong> Példa: „A csatolt referenciaképen látható testtartást és kameranézetet kövesd. A karakter egy kék kabátos felfedező, erdei háttérrel, festményszerű stílusban.” A tényleges eredmény a használt képgenerátortól függ.</li></ol><p>A galéria kész pózokat kínál; az ízületeket itt nem lehet kézzel átrendezni. A képen látható arc nélküli bábu a testtartást mutatja. Arcot, ruhát és hátteret a saját leírásoddal vagy más referenciával adhatsz hozzá.</p><p><strong>Billentyűzet:</strong> ← / → nézetváltás, ↑ / ↓ pózváltás, Esc bezárás. Mobilon húzd a képet jobbra vagy balra.</p>'
   },
   notice: {
-    title: 'Terms of use',
-    html: '<ul><li>The original author allows free use in your own work, including commercial work, editing and pose reference.</li><li><strong>Redistributing, reposting or reselling the image data itself (original or edited) is prohibited.</strong></li><li>Credit is not required (optional). Image metadata has been removed and assets are provided without warranty.</li><li>The figures are mannequin line drawings, not real people.</li><li>Do not use them in connection with real people, minors, or anything contrary to public order and morals.</li></ul><div class="info-note">This is an English summary of the original site\'s terms. The original author\'s published terms take precedence.</div>'
+    title: 'Felhasználási feltételek',
+    html: '<ul><li>Az eredeti készítő saját alkotásokhoz ingyenes felhasználást enged, kereskedelmi munkához, szerkesztéshez és pózreferenciaként is.</li><li><strong>A képfájlok tömeges letöltése, újraközlése, továbbadása és továbbértékesítése tiltott; ez a módosított képfájlokra is vonatkozik.</strong></li><li>A készítő feltüntetése nem kötelező. A képek garancia nélkül használhatók.</li><li>Az alakok báburajzok, nem valódi személyek. Az eredeti oldal tiltja a valós személyeket vagy kiskorúakat ábrázoló, illetve közerkölcsbe ütköző célú használatot.</li></ul><div class="info-note">Ez az eredeti feltételek magyar összefoglalása. Az eredeti készítő közzétett feltételei az irányadók. A NAS a felületet tárolja; a képek külső forrásból töltődnek, ezért internetkapcsolat szükséges.</div>'
   }
 };
 
@@ -881,13 +884,13 @@ $('#themeToggle').addEventListener('click', () => {
   root.dataset.theme = localStorage.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
 });
 
-fetch('data/pose-en.json')
+fetch('data/pose-hu.json?v=hu-1')
   .then(response => { if (!response.ok) throw new Error(`HTTP ${response.status}`); return response.json(); })
   .then(prepareData)
   .catch(error => {
     console.error(error);
-    $('#resultCount').textContent = 'Failed to load gallery';
-    grid.innerHTML = '<div class="empty"><h3>Could not load pose data</h3><p>Serve the page over HTTP and make sure data/pose-en.json exists.</p><button type="button" onclick="location.reload()">Reload</button></div>';
+    $('#resultCount').textContent = 'Nem sikerült betölteni a galériát';
+    grid.innerHTML = '<div class="empty"><h3>Nem sikerült betölteni a pózadatokat</h3><p>Frissítsd az oldalt. Ha a hiba megmarad, ellenőrizd a data/pose-hu.json fájlt.</p><button type="button" onclick="location.reload()">Újratöltés</button></div>';
   });
 })();
 </script>

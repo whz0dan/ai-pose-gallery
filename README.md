@@ -1,3 +1,29 @@
+# AI Pózatlasz · Magyar változat
+
+Magyar felület, 288 lefordított póznév és 1439 kameranézet. A „Hogyan
+használd?” útmutató bemutatja a póz és a kameranézet kiválasztását, valamint
+a referenciakép használatát képgenerátorban. Az oldal kész referenciákat
+mutat, nem szerkeszthető ízületi vázat.
+
+A képnézet a teljes képet a rendelkezésre álló területbe illeszti.
+A kis nézetképek is az eredeti 3:4 aránnyal, vágás nélkül jelennek meg.
+A keresés magyar és eredeti angol nevekkel, ékezet nélkül is működik.
+
+```sh
+python3 scripts/build_hu.py
+python3 -m http.server 8000
+```
+
+Ezután nyisd meg a `http://localhost:8000/` címet. A fordítások a
+`scripts/hu-translations.json` fájlban szerkeszthetők. A build a meglévő
+angol JSON-ból készít magyar katalógust; nem tölt le képeket.
+
+A képek továbbra is külső forrásból töltődnek. Az eredeti készítő
+[felhasználási feltételei](https://ai-pose-gallery.pages.dev/) érvényesek,
+beleértve a tömeges képletöltés és újraközlés tilalmát.
+
+## Az angol alapváltozat dokumentációja
+
 # AI Pose Reference Gallery
 
 **Live demo:** https://imorpheuz.github.io/ai-pose-gallery/
